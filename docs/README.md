@@ -27,7 +27,7 @@ Ginawa ang aklatang ito upang mabawasan ang paggamit ng `delay()` at matiyak ang
   - [Paggawa ng Instansiya](#paggawa-ng-instansiya)
   - [Pag-inisyalisa ng LED Tibok](#pag-inisyalisa-ng-led-tibok)
   - [Pagsasapanahon ng LED Tibok](#pagsasapanahon-ng-led-tibok-dapat-tawagin-sa-loop)
-  - [Mga Panguhang Funsiyon](#mga-panguhang-funsiyon)
+  - [Mga Panguhang Funsiyon](#mga-panguhang-funsiyon) 
 - [Halimbawa ng Paggamit](#halimbawa-ng-paggamit)
   - [Simpleng Gamit](#simpleng-gamit)
   - [Dinamikong Pagbabago ng Agwat](#dinamikong-pagbabago-ng-agwat)
