@@ -1,4 +1,4 @@
-# 📖 Dokumentasyon ng `LundayTibokAkl\` 
+# Dokumentasyon ng `LundayTibokAkl\` 
 
 📖 Available Versions:  
 🇵🇭 ***Filipino**** (Up-to-date) | 🇺🇸 [English](README_EN.md)  
@@ -8,7 +8,7 @@
 📩 **Email:** lakanharaya@gmail.com  
 🔗 **GitHub:** https://github.com/LakanHaraya  
 
-## 🔍 Panimula
+## Panimula
 
 Ang `LundayTibokAkl\` at isang Arduino library na nagbibigay ng mekanismo para sa **epekto ng pagtibok ng LED** gamit ang dalawang **agwat** (*intervals*). May kakayahan itong suportahan ang **aktibong-mataas** at **aktibong-mababa** na kumpigurasyon ng LED.
 
@@ -16,30 +16,30 @@ Ginawa ang aklatang ito upang mabawasan ang paggamit ng `delay()` at matiyak ang
 
 # 📑 Talaan ng Nilalaman
 
-- [📖 Dokumentasyon ng `LundayTibokAkl\`](#📖-dokumentasyon-ng-lundaytibokakl)
-- [🔍 Panimula](#🔍-panimula)
-- [🎯 Mga Tampok](#🎯-mga-tampok)
-- [⚙️ Instalasyon](#⚙️-instalasyon)
+- [Dokumentasyon ng `LundayTibokAkl\`](#dokumentasyon-ng-lundaytibokakl)
+- [Panimula](#panimula)
+- [Mga Tampok](#mga-tampok)
+- [Instalasyon](#instalasyon)
   - [Manwal na Pag-instal](#manwal-na-pag-instal)
   - [Pag-instal mula sa GitHub](#pag-instal-mula-sa-github)
-- [📌 Sanggunian ng API](#📌-sanggunian-ng-api)
-  - [🔹 Paggawa ng Instansiya](#🔹-paggawa-ng-instansiya)
-  - [🔹 Pag-inisyalisa ng LED Tibok](#🔹-pag-inisyalisa-ng-led-tibok)
-  - [🔹 Pagsasapanahon ng LED Tibok](#🔹-pagsasapanahon-ng-led-tibok-dapat-tawagin-sa-loop)
-  - [🔹 Mga Pangunahing Funsiyon](#🔹-mga-panguhang-funsiyon)
-- [🛠 Halimbawa ng Paggamit](#🛠-halimbawa-ng-paggamit)
-  - [🔸 Simpleng Gamit](#🔸-simpleng-gamit)
-  - [🔸 Dinamikong Pagbabago ng Agwat](#🔸-dinamikong-pagbabago-ng-agwat)
-- [📂 Estruktura ng Kaligpitan](#📂-estruktura-ng-kaligpitan)
-- [🛑 Pagdadalisap at Pagsisipat](#🛑-pagdadalisap-at-pagsisipat)
-- [📝 Lisensiya](#📝-lisensiya)
-- [🔗 Talabaguhan](#🔗-talabaguhan)
-  - [🆕 Bersiyon 1.0.0 (27 March 2025)](#🆕-bersiyon-100-27-march-2025)
-- [📢 May Katanungan?](#📢-may-katanungan)
-- [🎯 Kongklusyon](#🎯-kongklusyon)
+- [Sanggunian ng API](#sanggunian-ng-api)
+  - [Paggawa ng Instansiya](#paggawa-ng-instansiya)
+  - [Pag-inisyalisa ng LED Tibok](#pag-inisyalisa-ng-led-tibok)
+  - [Pagsasapanahon ng LED Tibok](#pagsasapanahon-ng-led-tibok-dapat-tawagin-sa-loop)
+  - [Mga Pangunahing Funsiyon](#mga-panguhang-funsiyon)
+- [Halimbawa ng Paggamit](#halimbawa-ng-paggamit)
+  - [Simpleng Gamit](#simpleng-gamit)
+  - [Dinamikong Pagbabago ng Agwat](#dinamikong-pagbabago-ng-agwat)
+- [Estruktura ng Kaligpitan](#estruktura-ng-kaligpitan)
+- [Pagdadalisap at Pagsisipat](#pagdadalisap-at-pagsisipat)
+- [Lisensiya](#lisensiya)
+- [Talabaguhan](#talabaguhan)
+  - [Bersiyon 1.0.0 (27 March 2025)](#bersiyon-100-27-march-2025)
+- [May Katanungan?](#may-katanungan)
+- [Kongklusyon](#kongklusyon)
 
 
-## 🎯 Mga Tampok
+## Mga Tampok
 
 ✅ **Suportado ang Aktibong-Mataas at Aktibong-Mababa na Kumpigurasyon ng LED**   
 ✅ **Dalawang Agwat para sa Flexible na Pagtibok ng LED**  
@@ -48,7 +48,7 @@ Ginawa ang aklatang ito upang mabawasan ang paggamit ng `delay()` at matiyak ang
 ✅ **Simpleng API para sa Madaling Integrasyon**
 
 ---
-## ⚙️ Instalasyon
+## Instalasyon
 
 ### Manwal na Pag-instal
 
@@ -65,9 +65,9 @@ Ginawa ang aklatang ito upang mabawasan ang paggamit ng `delay()` at matiyak ang
 git clone https://github.com/LakanHaraya/LundayTibokAkl.git
 ```
 
-## 📌 Sanggunian ng API
+## Sanggunian ng API
 
-### 🔹 Paggawa ng Instansiya
+### Paggawa ng Instansiya
 
 ``` cpp
 LundayTibok tibok(ledPin, interval1, interval2);
@@ -77,7 +77,7 @@ LundayTibok tibok(ledPin, interval1, interval2);
 - `interval1` (unsigned long, default = 500) → Unang agwat ng tibok (sa milisegundo).
 - `interval2` (unsigned long, default = 500) → Ikalawang agwat ng tibok (sa milisegundo).
 
-### 🔹 Pag-inisyalisa ng LED Tibok
+### Pag-inisyalisa ng LED Tibok
 
 ``` cpp
 tibok.begin(activeHigh);
@@ -86,7 +86,7 @@ tibok.begin(activeHigh);
   - `true` → Ang LED ay nakasindi (on) kapag **HIGH**
   - `false` → Ang LED ay nakasindi (on) sa **LOW**
 
-### 🔹 Pagsasapanahon ng LED Tibok *(Dapat tawagin sa `loop()`)*
+### Pagsasapanahon ng LED Tibok *(Dapat tawagin sa `loop()`)*
 
 ``` cpp
 tibok.update(); // Isinasapanahon ang estado ng LED
@@ -147,7 +147,7 @@ Lohika ng Pagtibok ng LED
                 +----------------------+
 ```
 
-### 🔹 Mga Panguhang Funsiyon
+### Mga Panguhang Funsiyon
 ``` cpp
 int pin = tibok.getLedPin();               // Kunin ang pin ng LED
 unsigned long i1 = tibok.getInterval1();   // Kunin ang unang agwat
@@ -156,9 +156,9 @@ bool isHigh = tibok.isActiveHigh();        // Alamin kung aktibong-mataas o akti
 bool isOn = tibok.isLedOn();               // Alamin kung nakasindi ang LED
 ```
 
-## 🛠 Halimbawa ng Paggamit
+## Halimbawa ng Paggamit
 
-### 🔸 Simpleng Gamit
+### Simpleng Gamit
 
 ``` cpp
 #include <LundayTibok.h>
@@ -174,7 +174,7 @@ void loop() {
 }
 ```
 
-### 🔸 Dinamikong Pagbabago ng Agwat
+### Dinamikong Pagbabago ng Agwat
 
 ``` cpp
 #include <LundayTibok.h>
@@ -195,7 +195,7 @@ void loop() {
 }
 ```
 
-## 📂 Estruktura ng Kaligpitan
+## Estruktura ng Kaligpitan
 
 ``` sh
 LundayTibokAkl/
@@ -212,7 +212,7 @@ LundayTibokAkl/
  │   ├── README_EN.md
 ```
 
-## 🛑 Pagdadalisap at Pagsisipat
+## Pagdadalisap at Pagsisipat
 
 | Isyu | Posibleng Sanhi | Solusyon |
 | :-- | :-- | :-- |
@@ -220,27 +220,27 @@ LundayTibokAkl/
 | **Masyadong mabilis/mabagal ang tibok** | *Maling halaga ng agwat* | Tiyaking tama ang `interval1` at `interval2` na ibinigay sa konstruktor. |
 | **Hindi sumasabay ang LED sa ibang bahagi ng code** | *Ginagamit ang `delay()` sa ibang bahagi ng code* | Iwasan ang `delay()`, gamitin ang `millis()` para sa pagtitiyempo. | 
 
-## 📝 Lisensiya
+## Lisensiya
 
 Ang `LundayTibokAkl` ay open-source software sa ilalim ng MIT License. Malaya itong gamitin, baguhin, at ipamahagi.
 
-## 🔗 Talabaguhan
+## Talabaguhan
 
-### 🆕 Bersiyon 1.0.0 (27 March 2025)
+### Bersiyon 1.0.0 (27 March 2025)
 
 ✅ Unang labas ng aklatan na may pangunahing kakayahan.  
 ✅ Suporta para sa aktibong-mataas at aktibong-mababa na kumpigurasyon ng LED  
 ✅ Dalawang agwat para sa pagtibok ng LED  
 ✅ Mga panguhang funsiyon (*getter functions*) para sa mas madaling pagdadalisap  
 
-## 📢 May Katanungan?
+## May Katanungan?
 
 Kung may mg katanungan, suhestiyon, o nais na baguhin sa aklatan, mangyaring makipag-ugnayan sa:
 
 📩 **Email:** lakanharaya@gmail.com  
 🔗 **GitHub:** https://github.com/LakanHaraya
 
-## 🎯 Kongklusyon
+## Kongklusyon
 
 Ang `LundayTibokAkl` ay isang mahusay na Arduino library na naglalayong gawing mas madali at episyente ang **mga epektong pagtibok ng LED** gamit ang non-blocking approach.
 
