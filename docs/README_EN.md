@@ -1,7 +1,7 @@
 
 # Documentation of `LundayTibokAkl\` 
 
-📜 *Malapamantayan:* **LNDH-0051** *(Activw)*  
+📜 *Malapamantayan:* **LNDH-0051** *(Active)*  
 📅 *Publication Date:* **27 March 2025**  
 🔢 *Version:* **2.1.0** *(Stable)*  
 🛠️ *Last Revision:* **29 March 2025**  
