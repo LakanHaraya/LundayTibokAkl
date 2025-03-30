@@ -45,7 +45,12 @@ estadong SINDI at PINDI ay tinutukoy ng agwat ng pagtibok. Sa
 | `NORMAL` | 1s / 1s | 0.5 Hz | Karaniwang operasyon |
 | `DISABLED` | Walang pagtibok | N/A | Hindi pinagana |
 
-![Dayagram ng Bilis ng Pagtibok](BilisNgPagtibok.png)
+
+<center>
+
+![Dayagram ng Bilis ng Pagtibok](../docs/BilisNgTibok.pnG)
+
+</center>
 
 Makikita sa larawan na habang tumataas ang antas ng alerto (*NORMAL* patungo sa
 *EMERGENCY*), bumibilis ang pagtibok ng indikador. Katulad nito ang paraan kung
