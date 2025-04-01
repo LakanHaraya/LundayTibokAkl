@@ -1,13 +1,13 @@
 /**
  * @file ButtonControlledLED.cpp
- * @brief Pagkontrol sa LED gamit ang isang push button.
+ * @brief Pagkontrol sa LED (bilang indikador) gamit ang isang push button.
  * 
  * Ipinapakita ng sketch na ito kung paano paganahin at huwag paganahin 
  * ang LED gamit ang isang push button. Ginagamit nito ang `LundayTibok` 
- * library upang awtomatikong mapamahala ang epekto ng pagkislap ng LED.
+ * library upang awtomatikong mapamahala ang epekto ng pagtibok ng LED.
  * 
  * - Kapag ang button ay pinindot, ang LED ay hindi pagaganahin (disable).
- * - Kapag binitawan ang button, ang LED ay muling kikislap (enable).
+ * - Kapag binitawan ang button, ang LED ay muling titibok (enable).
  * 
  * @note Ang button ay dapat konektado sa pin 2 at nakakumpigura sa INPUT_PULLUP.
  * 
@@ -20,7 +20,7 @@
 #define LED_PIN 13       ///< GPIO pin ng LED
 #define BUTTON_PIN 2     ///< GPIO pin ng push button
 
-LundayTibok led(LED_PIN, NORMAL);  ///< LED na may normal na blinking mode
+LundayTibok led(LED_PIN, NORMAL);  ///< LED na may normal na heartbeat mode
 
 void setup() {
     Serial.begin(115200);
@@ -29,9 +29,9 @@ void setup() {
 }
 
 void loop() {
-    led.update();  // Panatilihin ang tamang asal ng pagkislap
+    led.update();  // Panatilihin ang tamang asal ng pagtibok
 
-    if (digitalRead(BUTTON_PIN) == LOW) { // Kapag pinindot ang button (panatilihing nakapindot)
+    if (digitalRead(BUTTON_PIN) == LOW) { // Kapag pinindot ang button (panatilihing nakadiin)
         Serial.println("LED Di-pinagana!");
         led.disable();
         delay(100); // Debounce delay upang maiwasan ang maramihang triggers

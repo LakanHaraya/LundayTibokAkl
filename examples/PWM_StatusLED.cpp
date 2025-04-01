@@ -1,16 +1,16 @@
 /**
  * @file PWM_StatusLED.cpp
- * @brief Pagsasaayos ng liwanag at blinking mode ng LED gamit ang sensor input.
+ * @brief Pagsasaayos ng tingkad at antas ng pagtibok ng LED (bilang indikador) gamit ang potentiometer (sensor) input.
  * 
  * Ipinapakita ng sketch na ito kung paano gamitin ang LundayTibok library upang:
- * - Magpalit ng LED blinking mode batay sa sensor reading.
- * - Gumamit ng PWM upang isaayos ang liwanag ng LED depende sa sensor value.
+ * - Baguhin ang antas ng pagtibok ng LED batay sa pagbasa sa potentiometer (o sensor).
+ * - Gumamit ng PWM upang isaayos ang tingkad ng LED depende sa potentiometer (sensor) value.
  * 
  * **Pin Assignments:**
  * - **LED_PIN (6)** → LED na may PWM control.
  * - **SENSOR_PIN (A0)** → Analog sensor (hal. potentiometer o light sensor).
  * 
- * **Blinking Modes (Batay sa IEC 60073):**
+ * **Antas ng Pagtibok (Batay sa IEC 60073):**
  * - **EMERGENCY** (4 Hz) → Kapag mataas ang sensor value (> 600)
  * - **CRITICAL** (2 Hz) → Kapag nasa pagitan ng 451–600
  * - **WARNING** (1 Hz) → Kapag nasa pagitan ng 301–450
@@ -37,28 +37,28 @@ void setup() {
 }
 
 void loop() {
-    int sensorValue = analogRead(SENSOR_PIN);
-    int brightness = map(sensorValue, 0, 700, 0, 255); // Isaayos ayon sa sensor range ng iyong hardware
+    int potValue = analogRead(SENSOR_PIN);
+    int brightness = map(potValue, 0, 700, 0, 255); // Isaayos ayon sa potentiometer (sensor) range ng iyong hardware
 
-    // Baguhin ang blink mode batay sa sensor value
-    if (sensorValue > 600) {
-        statusLED.setBlinkMode(EMERGENCY);
-    } else if (sensorValue > 450) {
-        statusLED.setBlinkMode(CRITICAL);
-    } else if (sensorValue > 300) {
-        statusLED.setBlinkMode(WARNING);
+    // Kusang babaguhin ang antas ng pagtibok batay sa pot (sensor) value
+    if (potValue > 600) {
+        statusLED.setHeartbeatLevel(EMERGENCY);
+    } else if (potValue > 450) {
+        statusLED.setHeartbeatLevel(CRITICAL);
+    } else if (potValue > 300) {
+        statusLED.setHeartbeatLevel(WARNING);
     } else {
-        statusLED.setBlinkMode(NORMAL);
+        statusLED.setHeartbeatLevel(NORMAL);
     }
 
     statusLED.setPWM(brightness);
     statusLED.update();
 
     // Ipakita ang status sa Serial Monitor
-    Serial.print("Sensor: ");
-    Serial.print(sensorValue);
-    Serial.print(" | Moda ng Kislap: ");
-    Serial.print(statusLED.getBlinkMode());
+    Serial.print("Pot: ");
+    Serial.print(potValue);
+    Serial.print(" | Antas ng Pagtibok: ");
+    Serial.print(statusLED.getHeartbeatLevel());
     Serial.print(" | Tingkad: ");
     Serial.println(brightness);
 }

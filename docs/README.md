@@ -1,58 +1,47 @@
  
-# Dokumentasyon ng `LundayTibokAkl` 
+# 📖 `LundayTibokAkl` v2.1.1
 
 📜 *Malapamantayan:* **LNDH-0051** *(Aktibo)*  
 📅 *Petsa ng Paglalathala:* **27 Marso 2025**  
-🔢 *Bersiyon:* **2.1.0** *(Matatag)*   
+🔢 *Bersiyon:* **v2.1.1** *(Balangkas)*   
 🛠️ *Huling Rebisyon:* **29 Marso 2025**  
-👨‍💻 *May-akda:* **Lakan Haraya Dima**  
-📩 *Email:* lakanharaya@gmail.com  
-🔗 *GitHub:* https://github.com/LakanHaraya    
-📖 *Languages:*
+👨‍💻 *May-akda:* **Lakan Haraya Dima**   
+🌐 *Languages:*
 🇵🇭 ***Filipino**** **(Up-to-date)** | 🇺🇸 [English](README_EN.md)  
 
-## 1. Panimula 
+## 1. Ano ang `LundayTibokAkl`?
 
-Ang **`LundayTibokAkl`** ay isang malapamantayang aklatan para sa pamamahala
-ng mga tumitibok na indikador pang-istatus (hal., LED, buzzer, motor vibrations, atbp.)
-gamit ang iba't ibang heartbeat modes batay sa alert patterns sa pamantayan ng IEC 60073:2002 (*emergency, critical, warning, at normal*).
-Ang aklatang ito ay bahagi ng *Proyektong LundayHangin* at maaaring gamitin
-sa mga sistemang nangangailangan ng malinaw na indikasyon ng estado, maging ito man ay visual, auditory, o haptic.
+Ang `LundayTibokAkl` ay isang aklatang Arduino-compatible na nagbibigay ng estandardisadong kontrol para sa pamamahala
+ng mga tumitibok na indikador tulad ng LED, buzzer,vibration motors at iba pa.
+Sinusunod nito ang pamantayang [IEC 60073:2002](https://webstore.iec.ch/en/publication/587) para sa iba't ibang antas ng alerto: ***EMERGENCY***, ***CRITICAL***, ***WARNING***, ***NORMAL***, at ***DISABLED***.
 
-## Talaan ng Nilalaman
+> Ang aklatang ito ay bahagi ng *Proyektong LundayHangin* ngunit
+> maaaring isama sa anumang proyekto ng mikrokontroler na
+> nangangailangan ng malinaw na pidbak na natatanaw, nadidinig, o
+> nahahaplos. 
 
-1. [Panimula](#1-panimula)
-2. [Mga Tampok](#2-mga-tampok)
-3. [Paggamit](#3-paggamit)  
-   3.1 [Instalasyon](#31-instalasyon)  
-   3.2 [Halimbawa ng Paggamit](#32-halimbawa-ng-paggamit)  
-     - [Simpleng Pagkislap ng LED](#simpleng-pagkislap-ng-led)  
-     - [Pagpapatigil at Pagpapagana ng LED](#pagpapatigil-at-pagpapagana-ng-led)  
-4. [Estruktura ng Folder](#4-estruktura-ng-folder)  
-5. [Lisensiya](#5-lisensiya)  
-6. [Suporta at Katanungan](#6-suporta-at-katanungan)  
+## 2. Mga Pangunahing Tampok
 
+✅ **Estandardisadong Moda ng Pagtibok:** *EMERGENCY*, *CRITICAL*, *WARNING*, *NORMAL*, at *DISABLED*  
+✅ **PWM Support:** Para sa pagkontrol ng intensidad (hal., tingkad o lakas ng tunog)  
+✅ **Kakayahang Magpagana/Di-magpagana:** Madaling paganahin o ihinto ang indikasyon  
+✅ **Arduino-Compatible API:** Simple at madaling gamitin
 
-## 2. Mga Tampok
+## 3. Paano Mag-instal?
 
-- **Estandardisadong Pulse Modes:** EMERGENCY, CRITICAL, WARNING, NORMAL, at DISABLED
-- **PWM Support:** Para sa pagkontrol sa intensidad ng pagtibok (hal., lakas ng liwanag ng LED)
-- **Enable/Disabled Functionality:** Para sa epektibong pamamahala ng mga indikador.
-- **Arduino-Compatible API:** Madaling gamitin sa microcontroller-based projects.
+- I-clone ang repositoryo
+    ```
+    git clone https://github.com/LakanHaraya/LundayTibokAkl.git
+    ```
 
-## 3. Paggamit
+- Ilagay sa Arduino libraries folder
+    ``` 
+    mv LundayTibokAkl ~/Documents/Arduino/libraries/
+    ```
 
-### 3.1. Instalasyon
+🔗 Mas detalyadong gabay: [Paano mag-instal?](INSTALLATION.md)
 
-I-clone o i-download ang repositoryo at idagdag ito sa iyong Arduino libraries folder:
-
-```
-Arduino/libraries/LundayTibokAkl
-```
-
-### 3.2 Halimbawa ng Paggamit 
-
-#### **Simpleng Pagkislap ng LED**
+## 4. Halimbawa ng Paggamit
 
 ``` cpp
 #include <LundayTibok.h>
@@ -68,46 +57,15 @@ void loop() {
 }
 ```
 
-#### **Pagpapatigil at Pagpapagana ng LED**
+🔗 Marami pang halimbawa: [Mga Halimbawa](../examples/)
 
-``` cpp
-#include <LundayTibok.h>
+## 5. Dokumentasyon
 
-LundayTibok led(13, WARNING);
+📖 **API Reference:** Tingnan ang mga function [dito](API_REFERENCE.md)  
+💡 **Konsepto at Disenyo:** Basahin ang detalye [dito](CONCEPTS.md)   
+📌 **Changelog:** Mga pagbabago sa bawat bersiyon [dito](CHANGELOG.md)
 
-void setup() {
-    led.begin();
-    delay(5000);
-    led.disable(); // Ipindi ang LED pagkatapos ng 5 segundo
-    delay(5000);
-    led.enable(); // Ibalik ang pagkislap
-}
+## Suporta at Lisensiya
 
-void loop() {
-    led.update();
-}
-```
-
-Para sa higit pang mga halimbawa, magpunta sa `LundayTibokAkl/examples/`
-
-## 4. Estruktura ng Folder
-
-``` txt
-LundayTibokAkl/
-├── examples/             # Mga halimbawa ng code
-├── src/                  # Source code ng library
-|   ├── LundayTibok.h         # Declaration File
-|   ├── LundayTibok.cpp       # Implementation File
-├── docs/                 # Dokumentasyon
-|   ├── README.md             # Filipino
-|   ├── README_EN.md          # English
-├── library.properties    # Para sa Arduino Library Manager
-```
-
-## 5. Lisensiya
-
-Ang `LundayTibokAkl` ay open-source sa ilalim ng **MIT License**. Malaya itong gamitin at baguhin para sa iyong proyekto.
-
-## 6. Suporta at Katanungan
-
-Kung may katanungan o mungkahi, maaaring magbukas ng isang issue o magpadala ng pull request sa opisyal na repositoryo.
+Ang `LundayTibokAkl` ay open-source sa ilalim ng [**MIT License**](LICENSE).   
+📬 **May tanong?** Magbukas ng issue [dito](https://github.com/LakanHaraya/LundayTibokAkl/issues).
