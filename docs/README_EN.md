@@ -1,12 +1,10 @@
 
-# Documentation of `LundayTibokAkl/` v2.1.0 
+# Documentation of `LundayTibokAkl/` v2.1.1 
 
 📜 *Malapamantayan:* **LNDH-0051** *(Active)*  
 📅 *Publication Date:* **27 March 2025**  
-🔢 *Version:* **2.1.0** *(Stable)*  
+🔢 *Version:* **v2.1.1** *(Balangkas)*  
 🛠️ *Last Revision:* **29 March 2025**  
 👨‍💻 *Author:* **Lakan Haraya Dima**  
-📩 *Email:* lakanharaya@gmail.com  
-🔗 *GitHub:* https://github.com/LakanHaraya    
 📖 *Languages:*
 🇵🇭 [***Filipino**** *(Up-to-date)*](README.md) | 🇺🇸 **English**  

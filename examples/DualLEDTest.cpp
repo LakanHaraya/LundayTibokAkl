@@ -1,10 +1,10 @@
 /**
  * @file DualLEDTest.cpp
- * @brief Pagsusuri ng dalawang LED gamit ang magkaibang antas ng lohika.
+ * @brief Pagsusuri ng dalawang LED (bilang indikador) gamit ang magkaibang antas ng lohika.
  * 
  * Ipinapakita ng sketch na ito kung paano paganahin ang dalawang LED
  * gamit ang iba't ibang aktibong antas ng lohika (active HIGH at active LOW).
- * Gumagamit ito ng `LundayTibok` library para sa awtomatikong pagkislap ng LED.
+ * Gumagamit ito ng `LundayTibok` library para sa awtomatikong pagtibok ng LED.
  * 
  * - LED sa pin 6: Active HIGH (HIGH = ON, LOW = OFF)
  * - LED sa pin 7: Active LOW  (LOW = ON, HIGH = OFF)
@@ -40,4 +40,3 @@ void loop() {
     ledHigh.update();
     ledLow.update();
 }
- 

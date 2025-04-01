@@ -1,33 +1,33 @@
-# 📓 API Reference: `LundayTibokAkl` v2.1.0
+# 📓 API Reference: `LundayTibokAkl` v2.1.1
 
 ## Talaan ng API
 
 | Function | Deskripsiyon |
 | :-- | :-- |
-| [`LundayTibok(int ledPin, BlinkMode mode, bool usePWM = false)`](#lundaytibokint-ledpin-blinkmode-mode-bool-usepwm--false) | Constructor: Nagsisimula ng isang objek ng indikador. |
+| [`LundayTibok(int indicatorPin, HeartbeatLevel level, bool usePWM = false)`](#lundaytibokint-indicatorpin-heartbeatlevel-level-bool-usepwm--false) | Konstruktor: Nagsisimula ng isang objek ng indikador. |
 | [`void begin(bool activeHigh = true)`](#void-beginbool-activehigh--true) | Sinisimulan ang indikador na may kaayusang active `HIGH` o `LOW`. |
-| [`void update()`](#void-update) | Isinasapanahon ang estado ng indikador batay sa kasalukuyang moda. |
-| [`void setBlinkMode(BlinkMode mode)`](#void-setblinkmodeblinkmode-mode) | Itinatakda ang bagong moda ng pagtibok. |
-| [`void setPWM(int brightness)`](#void-setpwmint-brightness) | Itinatakda ang tingkad kung gumagamit ng PWM. |
+| [`void update()`](#void-update) | Isinasapanahon ang estado ng indikador batay sa kasalukuyang antas. |
+| [`void setHeartbeatLevel(HeartbeatLevel level)`](#void-setheartbeatlevelheartbeatlevel-level) | Itinatakda ang bagong antas ng pagtibok. |
+| [`void setPWM(int intensity)`](#void-setpwmint-intensity) | Itinatakda ang intensidad kung gumagamit ng PWM. |
 | [`void disable()`](#void-disable) | Pinipindi ang indikador at hinahadlangan ang pagtibok. |
-| [`void enable()`](#void-enable) | Ibinabalik ang karaniwang pagtibok ng indikador. |
-| [`const char* getBlinkMode() const`](#const-char-getblinkmode-const) | Ibinabalik ang kasalukuyang moda ng pagtibok bilang string. |
+| [`void enable()`](#void-enable) | Ibinabalik ang pangkaraniwang pagtibok ng indikador. |
+| [`const char* getHeartbeatLevel() const`](#const-char-getheartbeatlevel-const) | Ibinabalik ang kasalukuyang antas ng pagtibok bilang string. |
 
 ## Mga Detalye ng API
 
-### `LundayTibok(int ledPin, BlinkMode mode, bool usePWM = false)`
+### `LundayTibok(int indicatorPin, HeartbeatLevel level, bool usePWM = false)`
 
 #### Deskripsiyon:
 
-Constructor function na lumilikha ng LundayTibok object para sa pamamahala ng LED indicator.
+Funsiyong konstruktor na lumilikha ng objek ng LundayTibok para sa pamamahala ng indikador.
 
 #### Mga Parameter:
 
-- `ledPin` (*int*) - GPIO pin kung saan nakakabit ang indikador.
+- `indicatorPin` (*int*) - GPIO pin kung saan nakakabit ang indikador.
 
-- `mode` (*BlinkMode*) - Paunang moda ng pagtibok ng indikador.
+- `level` (*HeartbeatLevel*) - Paunang antas ng pagtibok ng indikador (`EMERGENCY`, `CRITICAL`, `WARNING`, `NORMAL`, `DISABLED`).
 
-- `usePWM` (*bool*, default: `false`) - Kung gagamitin ang PWM para sa pagkontrol ng halagang analog, tulad ng tingkad o lakas ng paghugong.
+- `usePWM` (*bool*, pinatakda: `false`) - Kung gagamitin ang PWM para sa pagkontrol ng halagang analog, halimbawa, intensidad tulad ng tingkad ng LED o lakas ng pagtunog.
 
 #### Halimbawa:
 
@@ -44,7 +44,7 @@ Sinisimulan ang indikador sa kaayusang HIGH o LOW.
 
 #### Mga Parameter:
 
-- `activeHigh` (*bool*, default: `true`) - Kung ang indikador ay nakasindi sa HIGH (`true`) o LOW (`false`).
+- `activeHigh` (*bool*, pinatakda: `true`) - Tumutukoy kung ang indikador ay nakasindi sa HIGH (`true`) o LOW (`false`).
 
 #### Halimbawa:
 
@@ -68,32 +68,32 @@ void loop() {
 ```
 ---
 
-### `void setBlinkMode(BlinkMode mode)`
+### `void setHeartbeatLevel(HeartbeatLevel level)`
 
 #### Deskripsiyon:
 
-Binabago ang kasalukuyang blink mode ng LED.
+Binabago ang kasalukuyang antas ng pagtibok ng indikador.
 
 #### Mga Parameter:
 
-- `mode` (*BlinkMode*) - Ang bagong moda ng pagtibok (`EMERGENCY`, `CRITICAL`, `WARNING`, `NORMAL`, `DISABLED`).
+- `level` (*HeartbeatLevel*) - Ang bagong antas ng pagtibok (`EMERGENCY`, `CRITICAL`, `WARNING`, `NORMAL`, `DISABLED`).
 
 #### Halimbawa:
 
 ``` 
-led.setBlinkMode(WARNING);
+led.setHeartbeatLevel(WARNING);
 ```
 ---
 
-### `void setPWM(int brightness)`
+### `void setPWM(int intensity)`
 
 #### Deskripsiyon:
 
-Itinatakda ang tingkad ng indikador kung ito ay nasa moda ng PWM.
+Itinatakda ang intensidad ng indikador kung ito ay nasa moda ng PWM.
 
 #### Mga Parameter:
 
-- `brightness` (*int*) - Halaga mula `0` (madilim) hanggang `255` (pinakamatingkad).
+- `intensity` (*int*) - Halaga mula `0` (pindi) hanggang `255` (pinakamatindi).
 
 #### Halimbawa:
 
@@ -128,16 +128,16 @@ led.enable();
 ```
 ---
 
-### `const char* getBlinkMode() const`
+### `const char* getHeartbeatLevel() const`
 
 #### Deskripsiyon:
 
-Ibinabalik ang kasalukuyang moda n g pagtibok bilang isang string.
+Ibinabalik ang kasalukuyang antas ng pagtibok bilang isang string.
 
 #### Halimbawa:
 
 ``` 
-Serial.println(led.getBlinkMode());
+Serial.println(led.getHeartbeatLevel());
 ```
 ---
 

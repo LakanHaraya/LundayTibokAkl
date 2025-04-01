@@ -1,5 +1,16 @@
 # CHANGELOG
 
+## LundayTibokAkl v2.1.1 - Inilabas noong 2025-04-01
+
+### 🔥 Bagong Tampok
+- Dinagdagan ng isang simpleng halimbawa `examples/HeartbeatTest.cpp`
+
+### 🔄 Mga Pagbabago
+- Pangkalahatang pagsasaayos ng dokumentasyon
+- Inayos ang mga ginamit na terminolohiya para sa konsistensi, kabilang ang mga halimbawang kodigo.
+- Pinalitan ang `setBlinkMode()` ng `setHeartbeatLevel()`.
+- Pinalitan ang `getBlinkMode()` ng `getHeartbeatLevel()`.
+
 ## LundayTibokAkl v2.1.0 - Inilabas noong 2025-03-29
 
 ### 🔥 Bagong Tampok

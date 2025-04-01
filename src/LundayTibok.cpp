@@ -1,13 +1,13 @@
 #include "LundayTibok.h"
 
-LundayTibok::LundayTibok(int ledPin, BlinkMode mode, bool usePWM)
-    : _ledPin(ledPin), _interval(mode), _lastToggleTime(0), _ledState(false),
-      _activeHigh(true), _usePWM(usePWM), _brightness(128), _isDisabled(false) {}
+LundayTibok::LundayTibok(int indicatorPin, HeartbeatLevel level, bool usePWM)
+    : _indicatorPin(indicatorPin), _interval(level), _lastToggleTime(0), _indicatorState(false),
+      _activeHigh(true), _usePWM(usePWM), _intensity(128), _isDisabled(false) {}
 
 void LundayTibok::begin(bool activeHigh) {
     _activeHigh = activeHigh;
-    pinMode(_ledPin, OUTPUT);
-    digitalWrite(_ledPin, _activeHigh ? LOW : HIGH);
+    pinMode(_indicatorPin, OUTPUT);
+    digitalWrite(_indicatorPin, _activeHigh ? LOW : HIGH);
 }
 
 void LundayTibok::update() {
@@ -16,35 +16,35 @@ void LundayTibok::update() {
     unsigned long currentMillis = millis();
     if (currentMillis - _lastToggleTime >= static_cast<unsigned long>(_interval)) {
         _lastToggleTime = currentMillis;
-        _ledState = !_ledState;
+        _indicatorState = !_indicatorState;
 
         if (_usePWM) {
-            analogWrite(_ledPin, _ledState ? _brightness : 0);
+            analogWrite(_indicatorPin, _indicatorState ? _intensity : 0);
         } else {
-            digitalWrite(_ledPin, _ledState == _activeHigh ? HIGH : LOW);
+            digitalWrite(_indicatorPin, _indicatorState == _activeHigh ? HIGH : LOW);
         }
     }
 }
 
-void LundayTibok::setBlinkMode(BlinkMode mode) {
-    if (mode != EMERGENCY && mode != CRITICAL && mode != WARNING && mode != NORMAL && mode != DISABLED) {
-        Serial.println("[BALA] Maling `BlinkMode`! Hindi ito itatakda.");
+void LundayTibok::setHeartbeatLevel(HeartbeatLevel level) {
+    if (level != EMERGENCY && level != CRITICAL && level != WARNING && level != NORMAL && level != DISABLED) {
+        Serial.println("[BALA] Maling `HeartbeatLevel`! Hindi ito itatakda.");
         return;
     }
-    _interval = mode;
+    _interval = level;
 }
 
-void LundayTibok::setPWM(int brightness) {
+void LundayTibok::setPWM(int intensity) {
     if (!_usePWM) {
-        Serial.println("[BALA] Ang PWM ay hindi pinagana! Hindi puwedeng magtakda ng tingkad.");
+        Serial.println("[BALA] Ang PWM ay hindi pinagana! Hindi puwedeng magtakda ng intensidad.");
         return; 
     }
-    _brightness = constrain(brightness, 0, 255);
+    _intensity = constrain(intensity, 0, 255);
 }
 
 void LundayTibok::disable() {
     _isDisabled = true;
-    digitalWrite(_ledPin, _activeHigh ? LOW : HIGH);
+    digitalWrite(_indicatorPin, _activeHigh ? LOW : HIGH);
 }
 
 void LundayTibok::enable() {
@@ -52,7 +52,7 @@ void LundayTibok::enable() {
 }
 
 //* Getter Methods!!
-const char* LundayTibok::getBlinkMode() const {
+const char* LundayTibok::getHeartbeatLevel() const {
     switch (_interval) {
         case EMERGENCY: return "KAGIPITAN";
         case CRITICAL: return "KRITIKAL";

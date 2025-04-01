@@ -14,7 +14,7 @@ Salamat sa iyong interes na mag-ambag sa `LundayTibokAkl`! Upang mapanatili ang 
 
 - **Dokumentasyon** – Pagbutihin ang dokumentasyon sa `README.md`, `API_REFERENCE.md`, at iba pa.
 
-2. Pagsusumite ng Issue
+### 2. Pagsusumite ng Issue
 
 - Siguraduhing hindi pa naiulat ang parehong isyu.
 
@@ -22,7 +22,7 @@ Salamat sa iyong interes na mag-ambag sa `LundayTibokAkl`! Upang mapanatili ang 
 
 - Ibigay ang bersiyon ng `LundayTibokAkl` at Arduino setup na ginamit.
 
-3. Pagsusumite ng Pull Request
+### 3. Pagsusumite ng Pull Request
 
 - I-**Fork** ang repositoryo at gumawa ng bagong branch.
 

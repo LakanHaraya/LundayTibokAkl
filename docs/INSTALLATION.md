@@ -2,17 +2,17 @@
 
 ## Paraan ng Pag-instal
 
-### 1️⃣ Gamit ang Arduino Library Manager *(Inirerekomenda)*
+### ~~1️⃣ Gamit ang Arduino Library Manager *(Inirerekomenda)*~~
 
-1. Buksan ang **Arduino IDE**.
+<!-- 1. Buksan ang **Arduino IDE**.
 
 2. Pumunta sa **Sketch** → **Include Library** → **Manage Libraries...**
 
 3. Hanapin ang **LundayTibokAkl** sa search bar.
 
-4. Piliin ang **LundayTibokAkl** at iklik ang **Install**.
+4. Piliin ang **LundayTibokAkl** at iklik ang **Install**. -->
 
-### 2️⃣ Manwal na Pag-instal *(Kung walang Library Manager)*
+### 2️⃣ Manwal na Pag-instal ~~*(Kung walang Library Manager)*~~
 
 1. I-download ang pinakabagong labas ng **LundayTibokAkl** mula sa [GitHub Releases](https://github.com/LakanHaraya/LundayTibokAkl/releases).
 

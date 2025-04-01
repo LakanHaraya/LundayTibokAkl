@@ -1,9 +1,9 @@
  
-# 📖 `LundayTibokAkl` v2.1.0
+# 📖 `LundayTibokAkl` v2.1.1
 
 📜 *Malapamantayan:* **LNDH-0051** *(Aktibo)*  
 📅 *Petsa ng Paglalathala:* **27 Marso 2025**  
-🔢 *Bersiyon:* **2.1.0** *(Matatag)*   
+🔢 *Bersiyon:* **v2.1.1** *(Balangkas)*   
 🛠️ *Huling Rebisyon:* **29 Marso 2025**  
 👨‍💻 *May-akda:* **Lakan Haraya Dima**   
 🌐 *Languages:*
@@ -12,14 +12,17 @@
 ## 1. Ano ang `LundayTibokAkl`?
 
 Ang `LundayTibokAkl` ay isang aklatang Arduino-compatible na nagbibigay ng estandardisadong kontrol para sa pamamahala
-ng mga tumitibok na indikador tulad ng LED, buzzer, motor vibrations at iba pa.
-Sinusunod nito ang pamantayang [IEC 60073:2002](https://webstore.iec.ch/en/publication/587) para sa iba't ibang antas ng alerto: **EMERGENCY**, **CRITICAL**, **WARNING**, **NORMAL**, at **DISABLED**.
+ng mga tumitibok na indikador tulad ng LED, buzzer,vibration motors at iba pa.
+Sinusunod nito ang pamantayang [IEC 60073:2002](https://webstore.iec.ch/en/publication/587) para sa iba't ibang antas ng alerto: ***EMERGENCY***, ***CRITICAL***, ***WARNING***, ***NORMAL***, at ***DISABLED***.
 
-Ang aklatang ito ay bahagi ng *Proyektong LundayHangin* ngunit maaaring isama sa anumang proyekto ng mikrokontroler na nangangailangan ng malinaw na pidbak na natatanaw, nadidinig, o nahahaplos. 
+> Ang aklatang ito ay bahagi ng *Proyektong LundayHangin* ngunit
+> maaaring isama sa anumang proyekto ng mikrokontroler na
+> nangangailangan ng malinaw na pidbak na natatanaw, nadidinig, o
+> nahahaplos. 
 
 ## 2. Mga Pangunahing Tampok
 
-✅ **Estandardisadong Moda ng Pagtibok:** EMERGENCY, CRITICAL, WARNING, NORMAL, at DISABLED  
+✅ **Estandardisadong Moda ng Pagtibok:** *EMERGENCY*, *CRITICAL*, *WARNING*, *NORMAL*, at *DISABLED*  
 ✅ **PWM Support:** Para sa pagkontrol ng intensidad (hal., tingkad o lakas ng tunog)  
 ✅ **Kakayahang Magpagana/Di-magpagana:** Madaling paganahin o ihinto ang indikasyon  
 ✅ **Arduino-Compatible API:** Simple at madaling gamitin
