@@ -1,4 +1,4 @@
-# 💡 Konsepto at Disenyo ng `LundayTibokAkl` v2.1.0
+# 💡 Konsepto at Disenyo ng `LundayTibokAkl` v2.1.1
 
 Ang konsepto ng pagtibok sa **LundayTibokAkl** ay isang sistema ng alerto na
 sumusunod sa pamantayang [IEC 60073:2002](https://webstore.iec.ch/en/publication/587), na nagtatakda ng iba't ibang antas ng
