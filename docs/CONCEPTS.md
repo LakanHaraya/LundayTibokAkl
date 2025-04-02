@@ -1,3 +1,4 @@
+
 # 💡 Konsepto at Disenyo ng `LundayTibokAkl` v2.1.2
 
 Ang konsepto ng pagtibok sa **LundayTibokAkl** ay isang sistema ng alerto na
