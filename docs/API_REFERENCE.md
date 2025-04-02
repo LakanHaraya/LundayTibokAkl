@@ -1,4 +1,4 @@
-# 📓 API Reference: `LundayTibokAkl` v2.1.1
+# 📓 API Reference: `LundayTibokAkl` v2.1.2
 
 ## Talaan ng API
 

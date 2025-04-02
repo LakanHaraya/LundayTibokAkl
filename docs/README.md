@@ -1,13 +1,14 @@
  
-# 📖 `LundayTibokAkl` v2.1.1
+# 📖 `LundayTibokAkl` v2.1.2 <sub><sub>🌐*FIL*</sub></sub>
+
+🌐 *Languages:*
+🇵🇭 ***Filipino**** **(Up-to-date)** | 🇺🇸 [English](README_EN.md)  
 
 📜 *Malapamantayan:* **LNDH-0051** *(Aktibo)*  
 📅 *Petsa ng Paglalathala:* **27 Marso 2025**  
-🔢 *Bersiyon:* **v2.1.1** *(Balangkas)*   
-🛠️ *Huling Rebisyon:* **29 Marso 2025**  
+🔢 *Bersiyon:* **v2.1.2** *(Matatag)*   
+🛠️ *Huling Rebisyon:* **02 Abril 2025**  
 👨‍💻 *May-akda:* **Lakan Haraya Dima**   
-🌐 *Languages:*
-🇵🇭 ***Filipino**** **(Up-to-date)** | 🇺🇸 [English](README_EN.md)  
 
 ## 1. Ano ang `LundayTibokAkl`?
 
@@ -22,7 +23,7 @@ Sinusunod nito ang pamantayang [IEC 60073:2002](https://webstore.iec.ch/en/publi
 
 ## 2. Mga Pangunahing Tampok
 
-✅ **Estandardisadong Moda ng Pagtibok:** *EMERGENCY*, *CRITICAL*, *WARNING*, *NORMAL*, at *DISABLED*  
+✅ **Estandardisadong Antas ng Pagtibok:** *EMERGENCY*, *CRITICAL*, *WARNING*, *NORMAL*, at *DISABLED*  
 ✅ **PWM Support:** Para sa pagkontrol ng intensidad (hal., tingkad o lakas ng tunog)  
 ✅ **Kakayahang Magpagana/Di-magpagana:** Madaling paganahin o ihinto ang indikasyon  
 ✅ **Arduino-Compatible API:** Simple at madaling gamitin
@@ -57,7 +58,7 @@ void loop() {
 }
 ```
 
-🔗 Marami pang halimbawa: [Mga Halimbawa](../examples/)
+🔗 Marami pang halimbawa [dito](../examples/).
 
 ## 5. Dokumentasyon
 

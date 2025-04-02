@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## LundayTibokAkl v2.1.2 - Inilabas noong 2025-04-02
+
+### 🔄 Mga Pagbabago
+
+- Pangkalahatang pagsasaayos ng dokumentasyon
+- Pinalitan ang file extensions ng mga `examples/` magmula sa `*.cpp` patungo sa `*.ino` para sa wastong pagbasa sa Arduino IDE.
+
+---
+
 ## LundayTibokAkl v2.1.1 - Inilabas noong 2025-04-01
 
 ### 🔥 Bagong Tampok
@@ -10,6 +19,8 @@
 - Inayos ang mga ginamit na terminolohiya para sa konsistensi, kabilang ang mga halimbawang kodigo.
 - Pinalitan ang `setBlinkMode()` ng `setHeartbeatLevel()`.
 - Pinalitan ang `getBlinkMode()` ng `getHeartbeatLevel()`.
+
+---
 
 ## LundayTibokAkl v2.1.0 - Inilabas noong 2025-03-29
 
