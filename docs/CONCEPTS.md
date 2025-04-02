@@ -1,4 +1,5 @@
-# 💡 Konsepto at Disenyo ng `LundayTibokAkl` v2.1.1
+
+# 💡 Konsepto at Disenyo ng `LundayTibokAkl` v2.1.2
 
 Ang konsepto ng pagtibok sa **LundayTibokAkl** ay isang sistema ng alerto na
 sumusunod sa pamantayang [IEC 60073:2002](https://webstore.iec.ch/en/publication/587), na nagtatakda ng iba't ibang antas ng
@@ -31,6 +32,14 @@ bilang isang *square wave*, kung saan may dalawang estado:
 - **SINDI (ON)**
 - **PINDI (OFF)**
 
+May dalawang antas ng lohika para sa pagsindi/pagpindi. Ito ang aktibong
+mataas at aktibong mababa. Sa aktibong mataas ang `HIGH` ang SINDI, habang
+sa aktibong mababa ang `LOW` ang SINDI, gaya ng makikita sa ibaba.
+
+![Aktibong Mataas](../docs/img/activeHigh-true.png)
+
+![Aktibong Mataas](../docs/img/activeHigh-false.png)
+
 ### Pagtutugma sa Pamantayang IEC 60073:2002
 
 Ang bawat siklo ng pagtibok ay may tagal (*duration*), kung saan ang haba ng
@@ -48,7 +57,7 @@ estadong SINDI at PINDI ay tinutukoy ng agwat ng pagtibok. Sa
 
 <center>
 
-![Dayagram ng Bilis ng Pagtibok](../docs/BilisNgTibok.png)
+![Dayagram ng Bilis ng Pagtibok](../docs/img/BilisNgTibok.png)
 
 </center>
 
